@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kalkulator BMI</title>
+    <script>
+        function oblicz() {
+            var waga = document.getElementById("waga").value;
+            var wzrost = document.getElementById("wzrost").value;
+
+            var bmi = waga / (wzrost * wzrost);
+            document.getElementById("wynik").innerHTML = (bmi * 10000).toFixed(3);
+        }
+    </script>
+    <style>
+        h1 {
+            text-align: center;
+            background-color: #afd5ee
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #afd5ee
+        }
+
+
+        h3 {
+            text-align: center;
+            background-color: #afd5ee
+        }
+    </style>
+
+</head>
+
+<body text="#000080" bgcolor=#B0E0E6>
+    <center>
+        <h1>BMI</h1>
+        <h2>Oblicz swój BMI</h2>
+        <h3><label for "waga">Tu podaj swoja wagę w kg:</label></h3>
+        <input type="number" id="waga" value=0>
+        <h3><label for "wzrost">Tu podaj swój wzrost w cm</label></h3>
+        <input type="number" id="wzrost" value=0> </br></br></br>
+        <input type="button" value="Oblicz BMI" onclick="oblicz()">
+
+        <div id="wynik"></div>
+    </center>
+
+
+</body>
+
+</html>
